@@ -2,8 +2,8 @@ from django.db import models
 
 
 class Drink(models.Model):
-    name_Korean = models.CharField(max_length=50)
-    name_English = models.CharField(max_length=50)
+    name_Kor = models.CharField(max_length=50)
+    name_Eng = models.CharField(max_length=50)
     description_main = models.CharField(max_length=300)
     description_sub = models.CharField(max_length=300)
     size = models.ForeignKey(
@@ -35,8 +35,8 @@ class Size(models.Model):
 
 
 class Nutrients(models.Model):
-    calorie = models.DecimalField(max_digits=5, decimal_places=1)
-    fat = models.DecimalField(max_digits=5, decimal_places=1)
+    kcal = models.DecimalField(max_digits=5, decimal_places=1)
+    sat_FAT = models.DecimalField(max_digits=5, decimal_places=1)
     protein = models.DecimalField(max_digits=5, decimal_places=1)
     sodium = models.DecimalField(max_digits=5, decimal_places=1)
     sugar = models.DecimalField(max_digits=5, decimal_places=1)
